@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v2/controller")
 public class UserController {
 
-    @Autowired
-    UserServices userServices;
+//    @Autowired
+//    UserServices userServices;
 
     @RequestMapping("/test")
     String test(){
@@ -21,10 +21,10 @@ public class UserController {
         return res;
     }
 
-    @RequestMapping("/services")
-    String getName(){
-        String name = userServices.getUserName();
-        return name;
-    }
+//    @RequestMapping("/services")
+//    String getName(){
+//        String name = userServices.getUserName();
+//        return name;
+//    }
 
 }
