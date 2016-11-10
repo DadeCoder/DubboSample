@@ -3,10 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
-    <!-- message center chat接口 -->
-    <dubbo:service ref="userServices" interface="com.dade.providerApi.UserRpc"
-                   version="1.0"/>
-
+    <dubbo:reference id="userServices" interface="com.dade.providerApi.UserRpc" check="false" retries="0"
+                     timeout="30000" version="1.0"/>
 
 
 </beans>
